@@ -14,3 +14,10 @@ services:
       APPID: 1000
       NAME: ${NAME}
       OPENAI_API_KEY: ${OPENAI_API_KEY}
+
+  nginx:
+    image: nginx:latest
+    ports:
+    - "80:80"
+    depends_on:
+    - node-demo
