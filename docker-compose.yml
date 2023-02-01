@@ -10,14 +10,16 @@ services:
       - /app/node_modules
     ports:
       - "3200:3200"
-    environment:
-      APPID: 1000
-      NAME: ${NAME}
-      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    env_file:
+      - .env
+    # environment:
+    #   APPID: 1000
+    #   NAME: ${NAME}
+    #   OPENAI_API_KEY: ${OPENAI_API_KEY}
 
-  nginx:
-    image: nginx:latest
-    ports:
-    - "80:80"
-    depends_on:
-    - node-demo
+  # nginx:
+  #   image: nginx:latest
+  #   ports:
+  #   - "80:80"
+  #   depends_on:
+  #   - node-demo
