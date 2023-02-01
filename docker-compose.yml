@@ -13,3 +13,4 @@ services:
     environment:
       APPID: 1000
       NAME: ${NAME}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
